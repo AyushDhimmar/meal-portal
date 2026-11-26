@@ -1,0 +1,15 @@
+.grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.head { text-align: center; font-size: 12px; font-weight: 600; color: var(--mantine-color-gray-6); padding: 4px 0; }
+.day {
+  aspect-ratio: 1; min-height: 44px; border-radius: var(--mantine-radius-md);
+  display: grid; place-items: center; font-size: 15px; font-weight: 600;
+  &[data-kind='off'] { color: var(--mantine-color-gray-4); font-weight: 400; cursor: default; }
+  &[data-kind='lunch'] { background: var(--mantine-color-brand-0); color: var(--mantine-color-brand-8); }
+  &[data-kind='holiday'] { background: var(--mantine-color-orange-0); color: var(--mantine-color-orange-8); text-decoration: line-through; }
+  &:not(:disabled):hover { outline: 2px solid var(--mantine-color-brand-3); }
+}
+.grid[aria-busy='true'] { opacity: 0.6; }
+.key { width: 12px; height: 12px; border-radius: 3px; display: inline-block;
+  &[data-kind='lunch'] { background: var(--mantine-color-brand-1); }
+  &[data-kind='holiday'] { background: var(--mantine-color-orange-1); }
+}
