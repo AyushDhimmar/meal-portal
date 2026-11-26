@@ -9,6 +9,7 @@ import { AccountPage } from '../features/auth/AccountPage'
 import { LoginPage } from '../features/auth/LoginPage'
 import { NotOnListPage } from '../features/auth/NotOnListPage'
 import { EmployeesPage } from '../features/employees/EmployeesPage'
+import { CyclesPage } from '../features/cycles/CyclesPage'
 
 function ServerUnreachable({ error, onRetry }: { error: unknown; onRetry: () => void }) {
   return (
@@ -58,6 +59,7 @@ export default function App() {
       <Route element={<Protected><AppLayout /></Protected>}>
         <Route index element={<Home />} />
         {/* Admin */}
+        <Route path="admin/cycles" element={<CyclesPage />} />
         <Route path="admin/employees" element={<EmployeesPage />} />
         {/* Everyone */}
         <Route path="account" element={<AccountPage />} />
