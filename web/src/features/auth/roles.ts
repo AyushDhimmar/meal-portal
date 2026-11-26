@@ -6,11 +6,10 @@ export const WORKSPACE_LABEL: Record<Workspace, string> = {
   admin: 'Admin',
 }
 
-// Start page per area. Areas not built yet start on Account; later features point these at their screens.
 export const WORKSPACE_HOME: Record<Workspace, string> = {
   employee: '/me',
   verifier: '/counter',
-  admin: '/admin/employees',
+  admin: '/admin',
 }
 
 /** Everyone is an Employee; Verifier and Admin are extra roles from user_roles. */

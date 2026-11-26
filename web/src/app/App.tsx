@@ -15,6 +15,8 @@ import { CounterPage } from '../features/counter/CounterPage'
 import { TodayPage } from '../features/counter/TodayPage'
 import { EmployeesPage } from '../features/employees/EmployeesPage'
 import { CyclesPage } from '../features/cycles/CyclesPage'
+import { DashboardPage } from '../features/dashboard/DashboardPage'
+import { FallbackPrintPage } from '../features/dashboard/FallbackPrintPage'
 
 function ServerUnreachable({ error, onRetry }: { error: unknown; onRetry: () => void }) {
   return (
@@ -71,11 +73,13 @@ export default function App() {
         <Route path="counter" element={<CounterPage />} />
         <Route path="counter/today" element={<TodayPage />} />
         {/* Admin */}
+        <Route path="admin" element={<DashboardPage />} />
         <Route path="admin/cycles" element={<CyclesPage />} />
         <Route path="admin/employees" element={<EmployeesPage />} />
         {/* Everyone */}
         <Route path="account" element={<AccountPage />} />
       </Route>
+      <Route path="/admin/print/fallback" element={<Protected><FallbackPrintPage /></Protected>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
