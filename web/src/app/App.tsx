@@ -8,6 +8,7 @@ import { AppLayout } from '../layout/AppLayout'
 import { AccountPage } from '../features/auth/AccountPage'
 import { LoginPage } from '../features/auth/LoginPage'
 import { NotOnListPage } from '../features/auth/NotOnListPage'
+import { EmployeesPage } from '../features/employees/EmployeesPage'
 
 function ServerUnreachable({ error, onRetry }: { error: unknown; onRetry: () => void }) {
   return (
@@ -56,6 +57,8 @@ export default function App() {
       <Route path="/login" element={<LoginRoute />} />
       <Route element={<Protected><AppLayout /></Protected>}>
         <Route index element={<Home />} />
+        {/* Admin */}
+        <Route path="admin/employees" element={<EmployeesPage />} />
         {/* Everyone */}
         <Route path="account" element={<AccountPage />} />
       </Route>

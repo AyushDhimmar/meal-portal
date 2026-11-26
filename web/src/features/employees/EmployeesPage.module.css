@@ -1,0 +1,7 @@
+.row {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 12px 16px; border-bottom: 1px solid var(--mantine-color-gray-2);
+  &:last-child { border-bottom: 0; }
+  &:active { background: var(--mantine-color-gray-0); }
+}
+.clickable { cursor: pointer; }

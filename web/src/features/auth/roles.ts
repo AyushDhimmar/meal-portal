@@ -10,7 +10,7 @@ export const WORKSPACE_LABEL: Record<Workspace, string> = {
 export const WORKSPACE_HOME: Record<Workspace, string> = {
   employee: '/account',
   verifier: '/account',
-  admin: '/account',
+  admin: '/admin/employees',
 }
 
 /** Everyone is an Employee; Verifier and Admin are extra roles from user_roles. */
