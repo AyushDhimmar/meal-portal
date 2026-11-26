@@ -8,6 +8,9 @@ import { AppLayout } from '../layout/AppLayout'
 import { AccountPage } from '../features/auth/AccountPage'
 import { LoginPage } from '../features/auth/LoginPage'
 import { NotOnListPage } from '../features/auth/NotOnListPage'
+import { EmployeeHome } from '../features/me/EmployeeHome'
+import { MyCodePage } from '../features/me/MyCodePage'
+import { HistoryPage } from '../features/me/HistoryPage'
 import { EmployeesPage } from '../features/employees/EmployeesPage'
 import { CyclesPage } from '../features/cycles/CyclesPage'
 
@@ -58,6 +61,10 @@ export default function App() {
       <Route path="/login" element={<LoginRoute />} />
       <Route element={<Protected><AppLayout /></Protected>}>
         <Route index element={<Home />} />
+        {/* Employee */}
+        <Route path="me" element={<EmployeeHome />} />
+        <Route path="me/history" element={<HistoryPage />} />
+        <Route path="me/code" element={<MyCodePage />} />
         {/* Admin */}
         <Route path="admin/cycles" element={<CyclesPage />} />
         <Route path="admin/employees" element={<EmployeesPage />} />

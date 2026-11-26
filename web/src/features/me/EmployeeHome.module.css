@@ -1,0 +1,15 @@
+.stat { background: var(--mantine-color-gray-0); border-radius: var(--mantine-radius-md); padding: 10px 12px; }
+.statLabel { color: var(--mantine-color-gray-6); }
+.statDark { background: rgba(255, 255, 255, 0.14); border-radius: var(--mantine-radius-md); padding: 10px 12px; color: #fff;
+  & .statLabel { color: rgba(255, 255, 255, 0.8); } }
+
+.option {
+  border: 2px solid var(--mantine-color-gray-3); border-radius: var(--mantine-radius-lg); padding: 14px; min-height: 84px;
+  background: #fff; text-align: left;
+  &[data-selected] { border-color: var(--mantine-color-brand-6); background: var(--mantine-color-brand-0); }
+  &[data-selected][data-out] { border-color: var(--mantine-color-gray-5); background: var(--mantine-color-gray-1); }
+  &:disabled { opacity: 0.55; cursor: not-allowed; }
+}
+
+.hero { background: linear-gradient(135deg, #0E7C66, #14987D); border: 0; color: #fff; }
+.heroMuted { color: rgba(255, 255, 255, 0.8); }
