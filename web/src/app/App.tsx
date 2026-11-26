@@ -18,6 +18,7 @@ import { CyclesPage } from '../features/cycles/CyclesPage'
 import { DashboardPage } from '../features/dashboard/DashboardPage'
 import { ReportsPage } from '../features/reports/ReportsPage'
 import { FallbackPrintPage } from '../features/dashboard/FallbackPrintPage'
+import { MorePage } from '../features/more/MorePage'
 
 function ServerUnreachable({ error, onRetry }: { error: unknown; onRetry: () => void }) {
   return (
@@ -78,6 +79,7 @@ export default function App() {
         <Route path="admin/cycles" element={<CyclesPage />} />
         <Route path="admin/employees" element={<EmployeesPage />} />
         <Route path="admin/reports" element={<ReportsPage />} />
+        <Route path="admin/more" element={<MorePage />} />
         {/* Everyone */}
         <Route path="account" element={<AccountPage />} />
       </Route>

@@ -1,5 +1,6 @@
 import {
-  IconCalendar, IconChartBar, IconHistory, IconHome, IconLayoutDashboard, IconQrcode, IconReportAnalytics, IconScan, IconUser, IconUsers, type Icon,
+  IconCalendar, IconChartBar, IconDots, IconHistory, IconHome, IconLayoutDashboard,
+  IconQrcode, IconReportAnalytics, IconScan, IconUser, IconUsers, type Icon,
 } from '@tabler/icons-react'
 import type { Workspace } from '../features/auth/roles'
 
@@ -23,5 +24,6 @@ export const NAV: Record<Workspace, NavItem[]> = {
     { to: '/admin/cycles', label: 'Cycles', icon: IconCalendar },
     { to: '/admin/employees', label: 'Employees', icon: IconUsers },
     { to: '/admin/reports', label: 'Reports', icon: IconReportAnalytics },
+    { to: '/admin/more', label: 'More', icon: IconDots },
   ],
 }
