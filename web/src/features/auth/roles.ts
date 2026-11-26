@@ -9,7 +9,7 @@ export const WORKSPACE_LABEL: Record<Workspace, string> = {
 // Start page per area. Areas not built yet start on Account; later features point these at their screens.
 export const WORKSPACE_HOME: Record<Workspace, string> = {
   employee: '/me',
-  verifier: '/account',
+  verifier: '/counter',
   admin: '/admin/employees',
 }
 

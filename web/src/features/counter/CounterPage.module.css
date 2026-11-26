@@ -1,0 +1,35 @@
+.layout { display: flex; flex-direction: column; gap: var(--mantine-spacing-md); }
+/* phones: once there is a result, show it first */
+.resultSide[data-has-result] { order: -1; }
+@media (min-width: 56em) {
+  .layout { display: grid; grid-template-columns: 1.05fr 1fr; align-items: start; }
+  .resultSide[data-has-result] { order: 0; }
+}
+
+.codeInput { font-size: 32px !important; font-weight: 800; letter-spacing: 0.12em; height: 64px !important; }
+
+.keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.keypad button {
+  height: 60px; border-radius: var(--mantine-radius-md); border: 1px solid var(--mantine-color-gray-3);
+  background: #fff; font-size: 24px; font-weight: 600; color: var(--mantine-color-gray-9);
+  display: grid; place-items: center; cursor: pointer; touch-action: manipulation;
+}
+.keypad button:active { background: var(--mantine-color-gray-1); }
+
+.nameRow { display: flex; align-items: center; gap: 12px; padding: 10px; min-height: 60px; border-radius: var(--mantine-radius-md); }
+.nameRow:hover, .nameRow:active { background: var(--mantine-color-gray-0); }
+
+.autoRow { border-top: 1px solid var(--mantine-color-gray-2); }
+
+.result {
+  min-height: 280px; border-radius: var(--mantine-radius-lg); padding: 22px; border: 2px solid;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.result[data-tone='idle'] { border-style: dashed; border-color: var(--mantine-color-gray-3); background: #fff; align-items: center; justify-content: center; text-align: center; }
+.result[data-tone='ok'] { border-color: var(--mantine-color-green-6); background: var(--mantine-color-green-0); }
+.result[data-tone='bad'] { border-color: var(--mantine-color-red-6); background: var(--mantine-color-red-0); }
+.result[data-tone='warn'] { border-color: var(--mantine-color-orange-6); background: var(--mantine-color-orange-0); }
+.result[data-tone='ok'] .resultTitle { color: var(--mantine-color-green-8); }
+.result[data-tone='bad'] .resultTitle { color: var(--mantine-color-red-8); }
+.result[data-tone='warn'] .resultTitle { color: var(--mantine-color-orange-8); }
+.person { background: #fff; border-radius: var(--mantine-radius-md); padding: 12px; }

@@ -1,0 +1,10 @@
+.wrap { position: relative; margin-top: var(--mantine-spacing-md); aspect-ratio: 4 / 3; border-radius: var(--mantine-radius-lg); overflow: hidden; background: #0B1220; }
+.video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.frame { position: absolute; left: 50%; top: 46%; width: 58%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.9); border-radius: 18px; box-shadow: 0 0 0 999px rgba(11, 18, 32, 0.35); }
+.laser { position: absolute; left: 8%; right: 8%; height: 2px; background: #34D399; box-shadow: 0 0 12px #34D399; animation: scan 1.6s ease-in-out infinite; }
+@keyframes scan { 0%, 100% { top: 10%; } 50% { top: 88%; } }
+@media (prefers-reduced-motion: reduce) { .laser { animation: none; top: 50%; } }
+.status, .hint { position: absolute; left: 0; right: 0; text-align: center; color: #fff; font-size: 13px; }
+.status { top: 46%; font-weight: 600; }
+.hint { bottom: 10px; opacity: 0.9; }

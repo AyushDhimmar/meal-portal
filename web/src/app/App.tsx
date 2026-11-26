@@ -11,6 +11,8 @@ import { NotOnListPage } from '../features/auth/NotOnListPage'
 import { EmployeeHome } from '../features/me/EmployeeHome'
 import { MyCodePage } from '../features/me/MyCodePage'
 import { HistoryPage } from '../features/me/HistoryPage'
+import { CounterPage } from '../features/counter/CounterPage'
+import { TodayPage } from '../features/counter/TodayPage'
 import { EmployeesPage } from '../features/employees/EmployeesPage'
 import { CyclesPage } from '../features/cycles/CyclesPage'
 
@@ -65,6 +67,9 @@ export default function App() {
         <Route path="me" element={<EmployeeHome />} />
         <Route path="me/history" element={<HistoryPage />} />
         <Route path="me/code" element={<MyCodePage />} />
+        {/* Verifier */}
+        <Route path="counter" element={<CounterPage />} />
+        <Route path="counter/today" element={<TodayPage />} />
         {/* Admin */}
         <Route path="admin/cycles" element={<CyclesPage />} />
         <Route path="admin/employees" element={<EmployeesPage />} />
