@@ -1,5 +1,5 @@
 import {
-  IconUser, type Icon,
+  IconUser, IconUsers, type Icon,
 } from '@tabler/icons-react'
 import type { Workspace } from '../features/auth/roles'
 
@@ -14,5 +14,6 @@ export const NAV: Record<Workspace, NavItem[]> = {
     { to: '/account', label: 'Account', icon: IconUser },
   ],
   admin: [
+    { to: '/admin/employees', label: 'Employees', icon: IconUsers },
   ],
 }
